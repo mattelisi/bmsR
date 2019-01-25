@@ -1,5 +1,5 @@
 Package: bmsR
-Title: Bayesian model selection in R
+Title: Bayesian model selection for group studies in R
 Version: 0.0.0.9000
 Authors@R: person("Matteo", "Lisi", email = "matte.crash@gmail.com", role = c("aut", "cre"))
 Description: R package to perform Bayesian model selection at the group level, i.e. by treating the model as a random effect and allowing different participants to use different models to generate their behavior (see Stephan, Penny, Daunizeau, Moran, and Friston. Bayesian model selection for group studies. NeuroImage, 46(4):1004–1017, 2009, for a description of the approach). The R code in this package is largely based on Matlab code present in SPM12 and the VBA toolbox.

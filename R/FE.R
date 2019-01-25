@@ -8,9 +8,9 @@
 #' @export
 
 FE <- function(m, a, g){
-  a0 <- rep(1, Nk)
   n <- dim(m)[1]  # number of subjects
   K <- dim(m)[2]  # number of models
+  a0 <- rep(1, K)
   Elogr <- digamma(a)- digamma(sum(a))
   Sqf <- sum(lgamma(a)) - lgamma(sum(a)) - sum((a-1)*Elogr)
   Sqm <- 0
