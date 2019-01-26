@@ -2,7 +2,7 @@
 # bmsR
 R package for doing Bayesian model comparison at the group level, treating the model as random effect.
 
-See Stephan, Penny, Daunizeau, Moran, and Friston. Bayesian model selection for group studies. NeuroImage, 46(4):1004–1017, 2009, for the details. Also, this [blog post](https://mattelisi.github.io/post/bms/)
+See Stephan, Penny, Daunizeau, Moran, and Friston (2009). Bayesian model selection for group studies. _NeuroImage, 46_(4):1004–1017. Also, this [blog post](https://mattelisi.github.io/post/bms/)
 
 This implementation has been translated from SPM 12, a toolbox for matlab used in the analysis of neuroimaging data.
 
@@ -28,7 +28,7 @@ bms0 <- VB_bms(m)
 ```
 
 Results:
-```
+```R
 > bms0
 $alpha
 [1] 1.593755 1.604584 2.061380 9.378872 1.767753 1.593655
