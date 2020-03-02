@@ -29,6 +29,13 @@ dirichlet_exceedance <- function(alpha, Nsamp=1e6){
   # For any given model k1, compute the probability that it is more
   # likely than any other model k2~=k1
   j <- apply(r, 1, which.max)
-  xp <- xp + unname(tapply(j, factor(j),length))
+  # xp <- xp + unname(tapply(j, factor(j),length)) # old
+  label_j <- factor(j, levels=1:Nk)
+  xp <- xp + unname(tapply(j, label_j,length))
+  
+  # if there's any model which was never the most frequent
+  # then it's value would turn out to be NA here
+  # so I cahnge it to zero
+  xp <- ifelse(is.na(xp),0,xp)
   xp <-xp/Nsamp
 }
